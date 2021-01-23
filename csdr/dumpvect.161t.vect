@@ -1,0 +1,782 @@
+
+;; Function tsmpool::remove_thread (_ZN7tsmpool13remove_threadEP11tsmthread_s, funcdef_no=867, decl_uid=22267, cgraph_uid=188, symbol_order=189)
+
+
+Analyzing loop at tsmpool.cpp:48
+tsmpool.cpp:48:28: note: ===== analyze_loop_nest =====
+tsmpool.cpp:48:28: note: === vect_analyze_loop_form ===
+tsmpool.cpp:48:28: note: not vectorized: control flow in loop.
+tsmpool.cpp:48:28: note: bad loop form.
+tsmpool.cpp:45:6: note: vectorized 0 loops in function.
+tsmpool::remove_thread (struct tsmpool * const this, struct tsmthread_t * thread)
+{
+  struct iterator D.26986;
+  struct tsmthread_s * * const __position;
+  struct iterator __position;
+  struct iterator D.25953;
+  struct __normal_iterator D.25952;
+  int i;
+  union pthread_mutex_t * _1;
+  unsigned int i.24_2;
+  struct tsmthread_s * _4;
+  struct tsmthread_s * * _5;
+  struct tsmthread_s * * pretmp_20;
+  struct tsmthread_s * * prephitmp_21;
+  unsigned int _22;
+  struct tsmthread_s * & _23;
+  struct tsmthread_s * * _24;
+  struct tsmthread_s * * _25;
+  struct tsmthread_s * * _26;
+  struct tsmthread_s * * _29;
+  struct tsmthread_s * * _30;
+  int _31;
+  unsigned int _32;
+  struct tsmthread_s * * _34;
+  int _36;
+  int _39;
+  unsigned int _40;
+  struct tsmthread_s * _42;
+  unsigned int _46;
+  unsigned int _48;
+
+  <bb 2> [local count: 114863532]:
+  # DEBUG BEGIN_STMT
+  _1 = &this_9(D)->mutex;
+  pthread_mutex_lock (_1);
+  # DEBUG BEGIN_STMT
+  # DEBUG i => 0
+  # DEBUG i => 0
+  # DEBUG D#149 => &this_9(D)->threads
+  _5 = MEM[(struct tsmthread_s * * *)this_9(D)];
+  # DEBUG D#7 => D#149
+  _26 = MEM[(struct tsmthread_s * * *)this_9(D) + 4B];
+  # DEBUG D#7 => D#149
+  # DEBUG INLINE_ENTRY size
+  # DEBUG this => D#7
+  # DEBUG this => D#7
+  _36 = _26 - _5;
+  _39 = _36 /[ex] 4;
+  _40 = (unsigned int) _39;
+  if (_40 != 0)
+    goto <bb 3>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 3> [local count: 108546038]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#150 => &this_9(D)->threads
+  # DEBUG D#8 => D#150
+  # DEBUG __n => 0
+  # DEBUG INLINE_ENTRY operator[]
+  # DEBUG this => D#8
+  # DEBUG __n => NULL
+  _42 = MEM[(struct tsmthread_s * &)_5];
+  if (thread_13(D) == _42)
+    goto <bb 5>; [5.50%]
+  else
+    goto <bb 10>; [94.50%]
+
+  <bb 4> [local count: 906139986]:
+  # DEBUG BEGIN_STMT
+  # DEBUG D#150 => &this_9(D)->threads
+  # DEBUG D#8 => D#150
+  # DEBUG __n => i.24_2
+  # DEBUG INLINE_ENTRY operator[]
+  # DEBUG this => D#8
+  _22 = i.24_2 * 4;
+  _23 = _5 + _22;
+  # DEBUG __n => NULL
+  _4 = *_23;
+  if (_4 == thread_13(D))
+    goto <bb 14>; [5.50%]
+  else
+    goto <bb 11>; [94.50%]
+
+  <bb 14> [local count: 49837699]:
+  # _46 = PHI <_22(4)>
+  goto <bb 5>; [100.00%]
+
+  <bb 11> [local count: 856302287]:
+  goto <bb 8>; [100.00%]
+
+  <bb 5> [local count: 55807731]:
+  # _48 = PHI <0(3), _46(14)>
+  # DEBUG BEGIN_STMT
+  # DEBUG D#151 => &this_9(D)->threads
+  # DEBUG D#8 => D#151
+  # DEBUG __n => 0
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => D#8
+  # DEBUG __n => NULL
+  operator delete (thread_13(D), 4);
+  # DEBUG BEGIN_STMT
+  # DEBUG D#206 => &this_9(D)->threads
+  # DEBUG D#152 => &this_9(D)->threads
+  # DEBUG this => D#152
+  # DEBUG INLINE_ENTRY begin
+  # DEBUG D#10 => &D#152->D.21388._M_impl._M_start
+  # DEBUG this => NULL
+  # DEBUG __i => D#10
+  # DEBUG INLINE_ENTRY __ct 
+  _25 = MEM[(struct tsmthread_s * * const &)this_9(D)];
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG this => NULL
+  # DEBUG D#11 => &D.22675
+  # DEBUG __n => 0
+  # DEBUG INLINE_ENTRY operator+
+  # DEBUG this => D#11
+  _24 = _25 + _48;
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __n => NULL
+  # DEBUG this => &D.22805
+  # DEBUG __i => &D.22685
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => &D.22685
+  # DEBUG INLINE_ENTRY base
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG this => D#206
+  # DEBUG __position => _24
+  # DEBUG INLINE_ENTRY erase
+  # DEBUG this => D#206
+  # DEBUG INLINE_ENTRY begin
+  # DEBUG D#10 => &D#206->D.21388._M_impl._M_start
+  # DEBUG this => NULL
+  # DEBUG __i => D#10
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG D#148 => MEM[(struct tsmthread_s * * const &)D#206]
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG this => NULL
+  # DEBUG D#28 => D#206
+  # DEBUG INLINE_ENTRY cbegin
+  # DEBUG this => D#28
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __lhs => &__position
+  # DEBUG __rhs => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => &__position
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG D#147 => _24 - D#148
+  # DEBUG __lhs => NULL
+  # DEBUG __rhs => NULL
+  # DEBUG __n => D#147 /[ex] 4
+  # DEBUG INLINE_ENTRY operator+
+  # DEBUG this => D#11
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __n => NULL
+  # DEBUG this => D#206
+  # DEBUG INLINE_ENTRY _M_erase
+  # DEBUG __position => _24
+  # DEBUG D#11 => &__position
+  # DEBUG __n => 1
+  # DEBUG INLINE_ENTRY operator+
+  # DEBUG this => D#11
+  _29 = _24 + 4;
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __n => NULL
+  # DEBUG this => D#206
+  # DEBUG INLINE_ENTRY end
+  # DEBUG D#9 => &D#206->D.21388._M_impl._M_finish
+  # DEBUG this => NULL
+  # DEBUG __i => D#9
+  # DEBUG INLINE_ENTRY __ct 
+  _30 = MEM[(struct tsmthread_s * * const &)this_9(D) + 4];
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG this => NULL
+  # DEBUG __lhs => NULL
+  # DEBUG __rhs => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG __lhs => NULL
+  # DEBUG __rhs => NULL
+  if (_29 != _30)
+    goto <bb 6>; [53.47%]
+  else
+    goto <bb 7>; [46.53%]
+
+  <bb 6> [local count: 29840394]:
+  # DEBUG D#11 => &__position
+  # DEBUG __n => 1
+  # DEBUG INLINE_ENTRY operator+
+  # DEBUG this => D#11
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __n => NULL
+  # DEBUG this => D#206
+  # DEBUG INLINE_ENTRY end
+  # DEBUG D#9 => &D#206->D.21388._M_impl._M_finish
+  # DEBUG this => NULL
+  # DEBUG __i => D#9
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG this => NULL
+  # DEBUG __first => _29
+  # DEBUG __last => _30
+  # DEBUG __result => _24
+  # DEBUG INLINE_ENTRY move
+  # DEBUG __it$_M_current => _29
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG D#137 => {CLOBBER}
+  # DEBUG __it$_M_current => D#137
+  # DEBUG __it$_M_current => _30
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG D#138 => {CLOBBER}
+  # DEBUG __it$_M_current => D#138
+  # DEBUG __first => _29
+  # DEBUG __last => _30
+  # DEBUG __result => _24
+  # DEBUG INLINE_ENTRY __copy_move_a2
+  # DEBUG __it => _29
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG D#134 => {CLOBBER}
+  # DEBUG __it => D#134
+  # DEBUG __it => _30
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG D#135 => {CLOBBER}
+  # DEBUG __it => D#135
+  # DEBUG __it => _24
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => NULL
+  # DEBUG D#136 => {CLOBBER}
+  # DEBUG __it => D#136
+  # DEBUG __first => _29
+  # DEBUG __last => _30
+  # DEBUG __result => _24
+  # DEBUG INLINE_ENTRY __copy_move_a
+  # DEBUG __simple => 1
+  # DEBUG __first => _29
+  # DEBUG __last => _30
+  # DEBUG __result => _24
+  # DEBUG INLINE_ENTRY __copy_m
+  _31 = _30 - _29;
+  # DEBUG _Num => _31 /[ex] 4
+  _32 = (unsigned int) _31;
+  __builtin_memmove (_24, _29, _32);
+  # DEBUG D#145 => (unsigned int) _31
+  # DEBUG __first => NULL
+  # DEBUG __last => NULL
+  # DEBUG __result => NULL
+  # DEBUG __first => NULL
+  # DEBUG __last => NULL
+  # DEBUG __result => NULL
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  # DEBUG __it => NULL
+  # DEBUG __it => NULL
+  # DEBUG __it => NULL
+  # DEBUG D#139 => {CLOBBER}
+  # DEBUG __first => D#139
+  # DEBUG D#140 => {CLOBBER}
+  # DEBUG __last => D#140
+  # DEBUG D#141 => {CLOBBER}
+  # DEBUG __result => D#141
+  # DEBUG D.25887 => _24 + D#145
+  # DEBUG __it$_M_current => NULL
+  # DEBUG __it$_M_current => NULL
+  # DEBUG __result => NULL
+  # DEBUG D#142 => {CLOBBER}
+  # DEBUG __first => D#142
+  # DEBUG D#143 => {CLOBBER}
+  # DEBUG __last => D#143
+  # DEBUG D#144 => {CLOBBER}
+  # DEBUG __result => D#144
+  pretmp_20 = MEM[(struct vector *)this_9(D)].D.21388._M_impl._M_finish;
+
+  <bb 7> [local count: 55807731]:
+  # prephitmp_21 = PHI <pretmp_20(6), _30(5)>
+  _34 = prephitmp_21 + 4294967292;
+  MEM[(struct vector *)this_9(D)].D.21388._M_impl._M_finish = _34;
+  # DEBUG D#146 => &D#206->D.21388._M_impl
+  # DEBUG D#58 => D#146
+  # DEBUG D#59 => _34
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG __a => D#58
+  # DEBUG __p => D#59
+  # DEBUG D#57 => D#59
+  # DEBUG D#56 => D#58
+  # DEBUG D#54 => D#56
+  # DEBUG D#55 => D#57
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG this => D#54
+  # DEBUG __p => D#55
+  # DEBUG this => NULL
+  # DEBUG __position => NULL
+  __position ={v} {CLOBBER};
+  # DEBUG this => NULL
+  # DEBUG D#153 => {CLOBBER}
+  # DEBUG __position => D#153
+  # DEBUG BEGIN_STMT
+  goto <bb 9>; [100.00%]
+
+  <bb 10> [local count: 102576006]:
+
+  <bb 8> [local count: 958878293]:
+  # i_43 = PHI <0(10), i_15(11)>
+  # DEBUG i => i_43
+  # DEBUG D#149 => &this_9(D)->threads
+  # DEBUG D#7 => D#149
+  # DEBUG this => D#7
+  # DEBUG this => D#7
+  # DEBUG D#150 => &this_9(D)->threads
+  # DEBUG D#8 => D#150
+  # DEBUG this => D#8
+  # DEBUG __n => NULL
+  i_15 = i_43 + 1;
+  # DEBUG i => i_15
+  # DEBUG i => i_15
+  # DEBUG D#149 => &this_9(D)->threads
+  # DEBUG D#7 => D#149
+  # DEBUG D#7 => D#149
+  # DEBUG INLINE_ENTRY size
+  # DEBUG this => D#7
+  # DEBUG this => D#7
+  i.24_2 = (unsigned int) i_15;
+  if (i.24_2 < _40)
+    goto <bb 4>; [94.50%]
+  else
+    goto <bb 9>; [5.50%]
+
+  <bb 9> [local count: 114863532]:
+  # DEBUG BEGIN_STMT
+  pthread_mutex_unlock (_1);
+  return;
+
+}
+
+
+
+;; Function tsmpool::tsmpool (_ZN7tsmpoolC2Eji, funcdef_no=862, decl_uid=22282, cgraph_uid=183, symbol_order=184)
+
+
+Analyzing loop at tsmpool.cpp:15
+tsmpool.cpp:15:3: note: ===== analyze_loop_nest =====
+tsmpool.cpp:15:3: note: === vect_analyze_loop_form ===
+tsmpool.cpp:15:3: note: not vectorized: control flow in loop.
+tsmpool.cpp:15:3: note: bad loop form.
+tsmpool.cpp:3:1: note: vectorized 0 loops in function.
+tsmpool::tsmpool (struct tsmpool * const this, size_t size, int num)
+{
+  struct __normal_iterator D.27038;
+  void * newptr;
+  int i;
+  struct vector * _1;
+  union pthread_mutex_t * _2;
+  int _3;
+  void * _23;
+  int iftmp.3_29;
+  void * * _30;
+  struct tsmthread_s * * _31;
+  void * * _46;
+  void * * _47;
+  void * * _49;
+  void * * _50;
+
+  <bb 2> [local count: 178956971]:
+  MEM[(struct  &)this_9(D)] ={v} {CLOBBER};
+  # DEBUG D#204 => &this_9(D)->threads
+  # DEBUG this => D#204
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG D#61 => &D#204->D.21388
+  # DEBUG this => D#61
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG D#60 => &D#61->_M_impl
+  # DEBUG this => D#60
+  # DEBUG INLINE_ENTRY __ct 
+  MEM[(struct  &)this_9(D)] ={v} {CLOBBER};
+  # DEBUG this => D#60
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => D#60
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  MEM[(struct _Vector_impl *)this_9(D)]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_9(D)]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_9(D)]._M_end_of_storage = 0B;
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG D#232 => &this_9(D)->buffers
+  # DEBUG this => D#232
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG D#82 => &D#232->D.22245
+  # DEBUG this => D#82
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG D#81 => &D#82->_M_impl
+  # DEBUG this => D#81
+  # DEBUG INLINE_ENTRY __ct 
+  MEM[(struct  &)this_9(D) + 12] ={v} {CLOBBER};
+  # DEBUG this => D#81
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => D#81
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  MEM[(struct _Vector_impl *)this_9(D) + 12B]._M_start = 0B;
+  MEM[(struct _Vector_impl *)this_9(D) + 12B]._M_finish = 0B;
+  MEM[(struct _Vector_impl *)this_9(D) + 12B]._M_end_of_storage = 0B;
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  this_9(D)->size = size_11(D);
+  this_9(D)->num = num_13(D);
+  # DEBUG BEGIN_STMT
+  this_9(D)->threads_cntr = 0;
+  # DEBUG BEGIN_STMT
+  this_9(D)->ok = 1;
+  # DEBUG BEGIN_STMT
+  this_9(D)->lowest_read_index = -1;
+  # DEBUG BEGIN_STMT
+  this_9(D)->write_index = 0;
+  # DEBUG BEGIN_STMT
+  # DEBUG D#3 => this_9(D)
+  # DEBUG index => 0
+  # DEBUG INLINE_ENTRY index_before
+  # DEBUG this => D#3
+  # DEBUG BEGIN_STMT
+  iftmp.3_29 = num_13(D) + -1;
+  # DEBUG index => NULL
+  this_9(D)->my_read_index = iftmp.3_29;
+  # DEBUG BEGIN_STMT
+  _2 = &this_9(D)->mutex;
+  _3 = pthread_mutex_init (_2, 0B);
+  if (_3 != 0)
+    goto <bb 3>; [34.00%]
+  else
+    goto <bb 4>; [66.00%]
+
+  <bb 3> [local count: 60845370]:
+  # DEBUG BEGIN_STMT
+  this_9(D)->ok = 0;
+  # DEBUG BEGIN_STMT
+  goto <bb 10>; [100.00%]
+
+  <bb 4> [local count: 118111600]:
+  # DEBUG i => 0
+  if (num_13(D) <= 0)
+    goto <bb 19>; [11.00%]
+  else
+    goto <bb 17>; [89.00%]
+
+  <bb 17> [local count: 105119324]:
+
+  <bb 5> [local count: 955630223]:
+  # i_57 = PHI <0(17), i_27(18)>
+  # DEBUG i => i_57
+  # DEBUG BEGIN_STMT
+  _23 = operator new [] (size_11(D));
+
+  <bb 6> [local count: 955630223]:
+  newptr = _23;
+  # DEBUG BEGIN_STMT
+  # DEBUG BEGIN_STMT
+  # DEBUG this => D#232
+  # DEBUG __x => &newptr
+  # DEBUG INLINE_ENTRY push_back
+  _46 = MEM[(struct vector *)this_9(D) + 12B].D.22245._M_impl._M_finish;
+  _47 = MEM[(struct vector *)this_9(D) + 12B].D.22245._M_impl._M_end_of_storage;
+  if (_46 != _47)
+    goto <bb 7>; [82.57%]
+  else
+    goto <bb 8>; [17.43%]
+
+  <bb 7> [local count: 789063875]:
+  # DEBUG D#203 => &D#232->D.22245._M_impl
+  # DEBUG D#17 => D#203
+  # DEBUG D#18 => &newptr
+  # DEBUG __p => _46
+  # DEBUG INLINE_ENTRY construct
+  # DEBUG __a => D#17
+  # DEBUG D#16 => D#18
+  # DEBUG __args#0 => D#16
+  # DEBUG D#15 => D#17
+  # DEBUG __t => D#16
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG __t => NULL
+  # DEBUG D#13 => D#15
+  # DEBUG D#14 => D#16
+  # DEBUG __p => _46
+  # DEBUG INLINE_ENTRY construct
+  # DEBUG this => D#13
+  # DEBUG D#12 => D#14
+  # DEBUG __args#0 => D#12
+  # DEBUG __t => D#12
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG __t => NULL
+  # DEBUG D#1 => 4
+  # DEBUG __p => _46
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG D.25077 => D#1
+  # DEBUG BEGIN_STMT
+  # DEBUG __p => NULL
+  *_46 = _23;
+  # DEBUG __p => NULL
+  # DEBUG __p => NULL
+  _49 = MEM[(struct vector *)this_9(D) + 12B].D.22245._M_impl._M_finish;
+  _50 = _49 + 4;
+  MEM[(struct vector *)this_9(D) + 12B].D.22245._M_impl._M_finish = _50;
+  goto <bb 9>; [100.00%]
+
+  <bb 8> [local count: 166566348]:
+  # DEBUG this => D#232
+  # DEBUG INLINE_ENTRY end
+  # DEBUG D#19 => &D#232->D.22245._M_impl._M_finish
+  # DEBUG this => NULL
+  # DEBUG __i => D#19
+  # DEBUG INLINE_ENTRY __ct 
+  # DEBUG this => NULL
+  # DEBUG __i => NULL
+  MEM[(struct __normal_iterator *)&D.27038] = _46;
+  # DEBUG this => NULL
+  _1 = &this_9(D)->buffers;
+  std::vector<void*>::_M_realloc_insert<void* const&> (_1, D.27038, &newptr);
+  goto <bb 9>; [100.00%]
+
+  <bb 22> [count: 0]:
+<L15>:
+  goto <bb 11>; [100.00%]
+
+  <bb 9> [local count: 955630225]:
+  # DEBUG this => NULL
+  # DEBUG __x => NULL
+  newptr ={v} {CLOBBER};
+  i_27 = i_57 + 1;
+  # DEBUG i => i_27
+  # DEBUG i => i_27
+  if (num_13(D) <= i_27)
+    goto <bb 19>; [11.00%]
+  else
+    goto <bb 18>; [89.00%]
+
+  <bb 18> [local count: 850510901]:
+  goto <bb 5>; [100.00%]
+
+  <bb 19> [local count: 118111600]:
+
+  <bb 10> [local count: 178956971]:
+  return this_9(D);
+
+  <bb 20> [count: 0]:
+<L14>:
+
+  <bb 11> [count: 0]:
+<L11>:
+  newptr ={v} {CLOBBER};
+  # DEBUG this => D#232
+  # DEBUG INLINE_ENTRY __dt 
+  _30 = MEM[(struct vector *)this_9(D) + 12B].D.22245._M_impl._M_start;
+  # DEBUG D#101 => D#232->D.22245._M_impl._M_finish
+  # DEBUG D#98 => &D#232->D.22245
+  # DEBUG this => D#98
+  # DEBUG INLINE_ENTRY _M_get_Tp_allocator
+  # DEBUG D#100 => &MEM[(struct _Vector_base *)D#232]._M_impl
+  # DEBUG this => NULL
+  # DEBUG D#48 => _30
+  # DEBUG D#49 => D#101
+  # DEBUG D#50 => D#100
+  # DEBUG INLINE_ENTRY _Destroy
+  # DEBUG __first => D#48
+  # DEBUG __last => D#49
+  # DEBUG D.26907 => D#50
+  # DEBUG D#47 => D#49
+  # DEBUG D#46 => D#48
+  # DEBUG D#44 => D#46
+  # DEBUG D#45 => D#47
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG __first => D#44
+  # DEBUG __last => D#45
+  # DEBUG D#43 => D#45
+  # DEBUG D#42 => D#44
+  # DEBUG D#40 => D#42
+  # DEBUG D#41 => D#43
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG D.25259 => D#40
+  # DEBUG D.25258 => D#41
+  # DEBUG D#99 => &D#232->D.22245
+  # DEBUG this => D#99
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG D#97 => D#99->_M_impl._M_end_of_storage
+  # DEBUG D#96 => D#97 - _30
+  # DEBUG D#95 => D#96 /[ex] 4
+  # DEBUG D#92 => D#99
+  # DEBUG D#93 => (unsigned int) D#95
+  # DEBUG __p => _30
+  # DEBUG INLINE_ENTRY _M_deallocate
+  # DEBUG this => D#92
+  # DEBUG __n => D#93
+  # DEBUG D#91 => D#93
+  # DEBUG D#90 => D#92
+  if (_30 != 0B)
+    goto <bb 12>; [0.00%]
+  else
+    goto <bb 13>; [0.00%]
+
+  <bb 12> [count: 0]:
+  # DEBUG D#89 => &D#90->_M_impl
+  # DEBUG D#87 => D#89
+  # DEBUG D#88 => D#91
+  # DEBUG __p => _30
+  # DEBUG INLINE_ENTRY deallocate
+  # DEBUG __a => D#87
+  # DEBUG __n => D#88
+  # DEBUG D#86 => D#88
+  # DEBUG D#85 => D#87
+  # DEBUG D#83 => D#85
+  # DEBUG D#84 => D#86
+  # DEBUG __p => _30
+  # DEBUG INLINE_ENTRY deallocate
+  # DEBUG this => D#83
+  # DEBUG D.26917 => D#84
+  operator delete (_30);
+  # DEBUG __p => NULL
+
+  <bb 13> [count: 0]:
+  # DEBUG __p => NULL
+  # DEBUG D#94 => &D#99->_M_impl
+  # DEBUG this => D#94
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => D#94
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => D#94
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  MEM[(struct  &)this_9(D) + 12] ={v} {CLOBBER};
+  # DEBUG this => NULL
+  resx 2
+
+  <bb 14> [count: 0]:
+<L13>:
+  # DEBUG this => D#204
+  # DEBUG INLINE_ENTRY __dt 
+  _31 = MEM[(struct vector *)this_9(D)].D.21388._M_impl._M_start;
+  # DEBUG D#80 => D#204->D.21388._M_impl._M_finish
+  # DEBUG D#77 => &D#204->D.21388
+  # DEBUG this => D#77
+  # DEBUG INLINE_ENTRY _M_get_Tp_allocator
+  # DEBUG D#79 => &MEM[(struct _Vector_base *)D#204]._M_impl
+  # DEBUG this => NULL
+  # DEBUG D#37 => _31
+  # DEBUG D#38 => D#80
+  # DEBUG D#39 => D#79
+  # DEBUG INLINE_ENTRY _Destroy
+  # DEBUG __first => D#37
+  # DEBUG __last => D#38
+  # DEBUG D.26927 => D#39
+  # DEBUG D#36 => D#38
+  # DEBUG D#35 => D#37
+  # DEBUG D#33 => D#35
+  # DEBUG D#34 => D#36
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG __first => D#33
+  # DEBUG __last => D#34
+  # DEBUG D#32 => D#34
+  # DEBUG D#31 => D#33
+  # DEBUG D#29 => D#31
+  # DEBUG D#30 => D#32
+  # DEBUG INLINE_ENTRY NULL
+  # DEBUG D.25219 => D#29
+  # DEBUG D.25218 => D#30
+  # DEBUG D#78 => &D#204->D.21388
+  # DEBUG this => D#78
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG D#76 => D#78->_M_impl._M_end_of_storage
+  # DEBUG D#75 => D#76 - _31
+  # DEBUG D#74 => D#75 /[ex] 4
+  # DEBUG D#71 => D#78
+  # DEBUG D#72 => (unsigned int) D#74
+  # DEBUG __p => _31
+  # DEBUG INLINE_ENTRY _M_deallocate
+  # DEBUG this => D#71
+  # DEBUG __n => D#72
+  # DEBUG D#70 => D#72
+  # DEBUG D#69 => D#71
+  if (_31 != 0B)
+    goto <bb 15>; [0.00%]
+  else
+    goto <bb 16>; [0.00%]
+
+  <bb 15> [count: 0]:
+  # DEBUG D#68 => &D#69->_M_impl
+  # DEBUG D#66 => D#68
+  # DEBUG D#67 => D#70
+  # DEBUG __p => _31
+  # DEBUG INLINE_ENTRY deallocate
+  # DEBUG __a => D#66
+  # DEBUG __n => D#67
+  # DEBUG D#65 => D#67
+  # DEBUG D#64 => D#66
+  # DEBUG D#62 => D#64
+  # DEBUG D#63 => D#65
+  # DEBUG __p => _31
+  # DEBUG INLINE_ENTRY deallocate
+  # DEBUG this => D#62
+  # DEBUG D.26937 => D#63
+  operator delete (_31);
+  # DEBUG __p => NULL
+
+  <bb 16> [count: 0]:
+  # DEBUG __p => NULL
+  # DEBUG D#73 => &D#78->_M_impl
+  # DEBUG this => D#73
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => D#73
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => D#73
+  # DEBUG INLINE_ENTRY __dt 
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  # DEBUG this => NULL
+  MEM[(struct  &)this_9(D)] ={v} {CLOBBER};
+  # DEBUG this => NULL
+  resx 1
+
+}
+
+

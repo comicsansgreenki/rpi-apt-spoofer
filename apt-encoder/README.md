@@ -46,6 +46,7 @@ Mode use 12bit (4096 colors, square root of 4096 is 64) look up table. Each colo
 <tr><td>Channel B image</td><td><img src="./doc/139-color-b.png" width="500"></td></tr>
 <tr><td>Decoded color image</td><td><img src="./doc/139-color-decoded.png" width="500"></td></tr>
 </table>
+
 ### APT
 
 APT means Automatic Picture Transmission. It is a system, developed in the 1960s, made to transmit low-resolution analog image for weather satellites. A complete APT image takes around 12 minutes to be built up at a rate of 2 lines per second. The data is broadcasted by the satellite. The stream is obtained by the AVHRR/3 instrument. Two channels with a low resolution are emitting all the time using VHF signals at reduced rates (around 120 lines/minutes).

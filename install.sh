@@ -22,10 +22,10 @@ echo "Okay, good. But nevertheless, BE CAREFUL!"
 echo " "
 echo "## Step 1: Install dependencies"
 sleep 1
-sudo apt-get update
+#sudo apt-get update
 sudo apt-get install -y libsndfile1-dev git
 sudo apt-get install -y imagemagick libfftw3-dev
-sudo apt-get install -y ffmpeg pulseaudio pulseaudio-tools 
+sudo apt-get install -y libreadline-dev
 
 # We use CSDR as a dsp for analogs modes thanks to HA7ILM
 git clone https://github.com/F5OEO/csdr
@@ -38,10 +38,6 @@ git clone https://github.com/F5OEO/librpitx
 cd librpitx/src || exit
 make
 cd ../../ || exit
-
-cd pift8
-git clone https://github.com/kgoba/ft8_lib
-cd ../
 
 make
 sudo make install
@@ -79,5 +75,6 @@ make
 mv ./apt-encoder/Debug/noaa_apt ./aptencoder
 make clean
 cd ../
+echo " "
 echo "## All set! Don't have fun! "
 echo "## And I'm sorry I had to throw 2 huge prompts at you...it's a big (sometimes legal) thing when you're dealing with actual radio transmissions."
